@@ -9,7 +9,7 @@ public class CounterControllerAnimal : MonoBehaviour
     private int counter = 0;
     private int anotherValue = 500;
 
-    private void Start()
+    public void Start()
     {
         UpdateAnotherValueText();
     }
@@ -19,7 +19,7 @@ public class CounterControllerAnimal : MonoBehaviour
         UpdateCounterText();
         if (anotherValue < 10000)
         {
-            anotherValue -= 100;
+            anotherValue -= 90;
             UpdateAnotherValueText();
         }
     }

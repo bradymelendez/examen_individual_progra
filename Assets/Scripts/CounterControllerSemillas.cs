@@ -7,8 +7,7 @@ public class CounterControllerSemillas : MonoBehaviour
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI anotherValueText;
     public int counter = 0;
-    private int anotherValue = 500;
-
+    public int anotherValue = 500;
     private void Start()
     {
         UpdateAnotherValueText();
@@ -56,7 +55,7 @@ public class CounterControllerSemillas : MonoBehaviour
 
             if (anotherValue < 10000)
             {
-                UpdateAnotherValueText();
+                UpdateAnotherValueText(); 
             }
         }
     }
@@ -66,8 +65,9 @@ public class CounterControllerSemillas : MonoBehaviour
         counterText.text = "Semillas : " + counter.ToString();
     }
 
-    void UpdateAnotherValueText()
+   public void UpdateAnotherValueText()
     {
         anotherValueText.text = "Monedas : " + anotherValue.ToString();
     }
+
 }
