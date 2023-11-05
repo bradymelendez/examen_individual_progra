@@ -11,6 +11,7 @@ public class InteraccionCanvas : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         canvas.enabled = false;
     }
 

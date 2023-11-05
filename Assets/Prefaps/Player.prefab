@@ -360,7 +360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6841392278062618104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.06, y: -0.04, z: 0.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -413,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 8853742765712005260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 99.45952, y: 3.355, z: -107.9607}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7506383267676994916}
@@ -421,7 +421,7 @@ Transform:
   - {fileID: 6688353912867920730}
   - {fileID: 803866491719107386}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7864791251830403890
 MeshFilter:
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  walkSpeed: 50
+  walkSpeed: 70
   speedMultiplier: 1
   shootSpeed: 40
   airMultiplier: 0
@@ -545,7 +545,6 @@ MonoBehaviour:
   orientation: {fileID: 1554892538193672501}
   groundDrag: 6
   airDrag: 4
-  jumpForce: 5
   maxSlopeAngle: 1
   groundCheck: {fileID: 7367800806931321454}
   groundMask:

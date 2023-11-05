@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
 public class CounterControllerSemillas : MonoBehaviour
 {
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI anotherValueText;
-    private int counter = 0;
+    public int counter = 0;
     private int anotherValue = 500;
 
     private void Start()
@@ -24,6 +23,15 @@ public class CounterControllerSemillas : MonoBehaviour
             UpdateAnotherValueText();
         }
     }
+    public void IncreaseCounter2()
+    {
+        counter++;
+        UpdateCounterText();
+        if (anotherValue < 10000)
+        {
+            UpdateAnotherValueText();
+        }
+    }
 
     public void DecreaseCounter()
     {
@@ -35,6 +43,19 @@ public class CounterControllerSemillas : MonoBehaviour
             if (anotherValue < 10000)
             {
                 anotherValue += 50;
+                UpdateAnotherValueText();
+            }
+        }
+    }
+    public void DecreaseCounter2()
+    {
+        if (counter > 0)
+        {
+            counter--;
+            UpdateCounterText();
+
+            if (anotherValue < 10000)
+            {
                 UpdateAnotherValueText();
             }
         }

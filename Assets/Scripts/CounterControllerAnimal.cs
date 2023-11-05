@@ -23,7 +23,15 @@ public class CounterControllerAnimal : MonoBehaviour
             UpdateAnotherValueText();
         }
     }
-
+    public void IncreaseCounter2()
+    {
+        counter++;
+        UpdateCounterText();
+        if (anotherValue < 10000)
+        {
+            UpdateAnotherValueText();
+        }
+    }
     public void DecreaseCounter()
     {
         if (counter > 0)
@@ -34,6 +42,19 @@ public class CounterControllerAnimal : MonoBehaviour
             if (anotherValue < 10000)
             {
                 anotherValue += 100;
+                UpdateAnotherValueText();
+            }
+        }
+    }
+    public void DecreaseCounter2()
+    {
+        if (counter > 0)
+        {
+            counter--;
+            UpdateCounterText();
+
+            if (anotherValue < 10000)
+            {
                 UpdateAnotherValueText();
             }
         }
