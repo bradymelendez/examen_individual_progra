@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector] public Rigidbody rb;
-    //PlayerJump pJump;
 
     [Header("Movement")]
     float movementSpeed;
@@ -17,10 +16,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float horizontalMovement, verticalMovement;
     [SerializeField] Transform orientation;
     [SerializeField] float groundDrag, airDrag;
-
-    [Header("Jumping")]
-    [SerializeField] float jumpForce = 5f;
-    bool canJump => (isGrounded && Input.GetKeyDown(KeyCode.Space));
 
     [Header("Slope")]
     [SerializeField] float maxSlopeAngle;
@@ -42,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckGround();
         PlayerInput();
-        Jump();
     }
 
     void FixedUpdate()
@@ -101,16 +95,6 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = airDrag;
         }
     }
-
-    public void Jump()
-    {
-        if (canJump && Time.timeScale > 0)
-        {
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-        }
-    }
-
 
     void CheckGround()
     {
